@@ -1,1 +1,27 @@
+.animated {
+    font-size: 600px;
+    font-weight: 900;
+    font-family: 'montserrat', sans-serif;
+    text-decoration: none;
+    background: linear-gradient(to right, #CCC 50%, #FF5858 50%, #CC2E5D);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
 
+.animated:link {
+    font-size: 600px;
+    font-weight: 900;
+    font-family: 'montserrat', sans-serif;
+    text-decoration: none;
+    background: linear-gradient(to right, #CCC 50%, #FF5858 50%, #CC2E5D);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
+
+.animated:hover {
+    background-repeat: -100%;
+}
