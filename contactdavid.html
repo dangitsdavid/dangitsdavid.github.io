@@ -60,19 +60,38 @@
 <!-- Contact Form -->
 <div class="jumbotron mb-4">
     <div class="container">
-        <h1 class="display-3">Contact David</h1>
-        <p class="lead">Feel free to ask me any questions!</p>
+        <div class="pb-3">
+            <h1 class="display-3">Contact David</span></h1>
+            <a href="#" class="display-3 animated">Contact David</a>
+            <p class="lead">Feel free to ask me any questions!</p>
+        </div>
         <form>
             <div class="mb-3">
-              <label for="InputEmail1" class="form-label">Email Address</label>
+              <label for="InputEmail1" class="form-label"><h4>Email Address</h4></label>
               <input type="email" class="form-control" id="InputEmail1">
             </div>
             <div class="mb-3">
-                <label for="FormControlTextarea1" class="form-label">Email Body</label>
+                <label for="FormControlTextarea1" class="form-label"><h4>Email Body</h4></label>
                 <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
             </div>
-            <p class="light"> Temporarily Out of Service </p>
+            <!-- Radio buttons -->
+            <fieldset class="form-group">
+                <h4 class="form-label">Reason for contact</h4>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                    Just chatting
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Business-related
+                  </label>
+                </div>
+              </fieldset>
             <button type="submit" class="btn btn-outline-dark" disabled>Submit</button>
+            <p class="mt-3">Temporarily Unavailable</p>
           </form>
     </div>
 </div>
