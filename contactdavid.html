@@ -28,12 +28,21 @@
                 <span class="sr-only">(current)</span>
             </a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" href="#">About</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Certifications</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://www.youracclaim.com/badges/ec6d75f8-7478-41bf-a7ae-9a6ef984ab27">AWS Solutions Architect (SAA-C02)</a>
+                <a class="dropdown-item" href="https://www.youracclaim.com/badges/096c6246-8682-4253-b76a-55f0b72ca9e3">AWS Certified Cloud Practitioner</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.youracclaim.com/badges/6f3201af-c2bf-4975-8fe1-a95b47ea0452">CompTIA A+ CE</a>
+              </div>
             </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" href="#">Projects</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle disabled" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Cardano Node</a>
+                  <a class="dropdown-item" href="#">TBD</a>
+              </li>
             <li class="nav-item">
                 <a class="nav-link" href="https://www.linkedin.com/in/dangdavid127/">LinkedIn</a>
             </li>
@@ -61,8 +70,8 @@
 <div class="jumbotron mb-4">
     <div class="container">
         <div class="pb-3">
-            <h1 class="display-3">Contact David</span></h1>
-            <p class="lead">Feel free to ask me any questions!</p>
+            <h1 class="display-3 text-monospace">Contact <span class="text-danger">David Dang</span></h1>
+            <p class="lead text-monospace">Feel free to ask me any questions with form below or email <u class="font-weight-bold">david.dang@davidsblock.com</u></p>
         </div>
         <form>
             <div class="mb-3">
@@ -70,13 +79,13 @@
               <input type="email" class="form-control" id="InputEmail1">
             </div>
             <div class="mb-3">
-                <label for="FormControlTextarea1" class="form-label"><h4>Email Body</h4></label>
+                <label for="FormControlTextarea1 " class="form-label"><h4>Email Body</h4></label>
                 <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
             </div>
             <!-- Radio buttons -->
             <fieldset class="form-group">
                 <h4 class="form-label">Reason for contact</h4>
-                <div class="form-check">
+                <div class="form-check pb-2">
                   <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
                     Just Chatting
@@ -89,8 +98,8 @@
                   </label>
                 </div>
               </fieldset>
-            <button type="submit" class="btn btn-outline-dark" disabled>Submit</button>
-            <p class="mt-3">Temporarily Unavailable</p>
+            <button type="submit" class="btn btn-outline-dark text-monospace" disabled>Submit*</button>
+            <p class="mt-3 text-monospace">*Temporarily Unavailable</p>
           </form>
     </div>
 </div>
