@@ -1,32 +1,56 @@
-.animated {
-    font-size: 600px;
-    font-weight: 900;
-    font-family: 'montserrat', sans-serif;
-    text-decoration: none;
-    background: linear-gradient(to right, #CCC 50%, #FF5858 50%, #CC2E5D);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.5s ease-out;
-}
-
-.animated:link {
-    font-size: 600px;
-    font-weight: 900;
-    font-family: 'montserrat', sans-serif;
-    text-decoration: none;
-    background: linear-gradient(to right, #CCC 50%, #FF5858 50%, #CC2E5D);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.5s ease-out;
-}
-
-.animated:hover {
-    background-repeat: -100%;
-}
-
+/* Opaque 95% */
 .aboutme {
     opacity: 0.95;
   }
+
+/* Hvr Square */
+p,
+  [class^="hvr-"] {
+      font-family: 'Roboto', sans-serif;
+  }
   
+  [class^="hvr-"] {
+    margin: .2em;
+    padding: .5em;
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none;
+    color: white;
+    /* Prevent highlight colour when element is tapped */
+    -webkit-tap-highlight-color: white;
+  
+    /* Smooth fonts */
+    -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+
+/* Underline From Center */
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #e968a4;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
