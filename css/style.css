@@ -25,3 +25,8 @@
 .animated:hover {
     background-repeat: -100%;
 }
+
+.aboutme {
+    opacity: 0.95;
+  }
+  
