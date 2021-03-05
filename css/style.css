@@ -17,7 +17,7 @@ p,
     text-decoration: none;
     color: white;
     /* Prevent highlight colour when element is tapped */
-    -webkit-tap-highlight-color: white;
+    -webkit-tap-highlight-color: transparent;
   
     /* Smooth fonts */
     -webkit-font-smoothing: antialiased;
