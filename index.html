@@ -1,228 +1,753 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8"/>
+	<meta name="description" content="Welcome to David's Block.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>David's Block</title>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/jpg" href="images/favicon.PNG"/>
 
-  <title>David's Block</title>
-  <meta name="description" content="David's Block">
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/jpg" href="./img/favicon.PNG"/>
+	<!-- Royal Preloader CSS -->
+	<link href="css/royal_preloader.css" rel="stylesheet">
 
-  <!-- Bootstrap/swatch-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.css" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<!-- jQuery Files -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Parallax File -->
+	<script type="text/javascript" src="js/parallax.min.js"></script>
 
-  <!-- Nav Bar -->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="./index.html" class="pr-2"><img src="./img/davidsblock.png" width="131" height="30" alt="David's Block" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbaritems" aria-controls="navbaritems" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="navbar-collapse collapse float-right" id="navbaritems">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                <a class="nav-link hvr-underline-from-left" href="./index.html">
-                    Home
-                    <span class="sr-only">(current)</span>
-                </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="nocapstakepool.com">Cardano Stake Pool</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle hvr-underline-from-left" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Certifications</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item hvr-bounce-to-right-aws" href="https://www.youracclaim.com/badges/ec6d75f8-7478-41bf-a7ae-9a6ef984ab27" target="_blank"><span class="text-warning">AWS</span> Solutions Architect - Associate (SAA-C02)</a>
-                      <a class="dropdown-item hvr-bounce-to-right-aws" href="https://www.youracclaim.com/badges/096c6246-8682-4253-b76a-55f0b72ca9e3" target="_blank"><span class="text-warning">AWS</span> Certified Cloud Practitioner</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item hvr-bounce-to-right-comptia" href="https://www.youracclaim.com/badges/6f3201af-c2bf-4975-8fe1-a95b47ea0452" target="_blank"><span class="text-danger">CompTIA</span> A+ CE</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item hvr-bounce-to-right-msft" href="https://www.youracclaim.com/badges/6f3201af-c2bf-4975-8fe1-a95b47ea0452" target="_blank"><span class="text-primary">Microsoft</span> Certified: Azure Fundamentals</a>
-                    </div>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="https://www.linkedin.com/in/dangdavid127/" target="_blank">
-                        LinkedIn
-                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDM4MiAzODIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4MiAzODI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiMwMDc3Qjc7IiBkPSJNMzQ3LjQ0NSwwSDM0LjU1NUMxNS40NzEsMCwwLDE1LjQ3MSwwLDM0LjU1NXYzMTIuODg5QzAsMzY2LjUyOSwxNS40NzEsMzgyLDM0LjU1NSwzODJoMzEyLjg4OQ0KCUMzNjYuNTI5LDM4MiwzODIsMzY2LjUyOSwzODIsMzQ3LjQ0NFYzNC41NTVDMzgyLDE1LjQ3MSwzNjYuNTI5LDAsMzQ3LjQ0NSwweiBNMTE4LjIwNywzMjkuODQ0YzAsNS41NTQtNC41MDIsMTAuMDU2LTEwLjA1NiwxMC4wNTYNCglINjUuMzQ1Yy01LjU1NCwwLTEwLjA1Ni00LjUwMi0xMC4wNTYtMTAuMDU2VjE1MC40MDNjMC01LjU1NCw0LjUwMi0xMC4wNTYsMTAuMDU2LTEwLjA1Nmg0Mi44MDYNCgljNS41NTQsMCwxMC4wNTYsNC41MDIsMTAuMDU2LDEwLjA1NlYzMjkuODQ0eiBNODYuNzQ4LDEyMy40MzJjLTIyLjQ1OSwwLTQwLjY2Ni0xOC4yMDctNDAuNjY2LTQwLjY2NlM2NC4yODksNDIuMSw4Ni43NDgsNDIuMQ0KCXM0MC42NjYsMTguMjA3LDQwLjY2Niw0MC42NjZTMTA5LjIwOCwxMjMuNDMyLDg2Ljc0OCwxMjMuNDMyeiBNMzQxLjkxLDMzMC42NTRjMCw1LjEwNi00LjE0LDkuMjQ2LTkuMjQ2LDkuMjQ2SDI4Ni43Mw0KCWMtNS4xMDYsMC05LjI0Ni00LjE0LTkuMjQ2LTkuMjQ2di04NC4xNjhjMC0xMi41NTYsMy42ODMtNTUuMDIxLTMyLjgxMy01NS4wMjFjLTI4LjMwOSwwLTM0LjA1MSwyOS4wNjYtMzUuMjA0LDQyLjExdjk3LjA3OQ0KCWMwLDUuMTA2LTQuMTM5LDkuMjQ2LTkuMjQ2LDkuMjQ2aC00NC40MjZjLTUuMTA2LDAtOS4yNDYtNC4xNC05LjI0Ni05LjI0NlYxNDkuNTkzYzAtNS4xMDYsNC4xNC05LjI0Niw5LjI0Ni05LjI0Nmg0NC40MjYNCgljNS4xMDYsMCw5LjI0Niw0LjE0LDkuMjQ2LDkuMjQ2djE1LjY1NWMxMC40OTctMTUuNzUzLDI2LjA5Ny0yNy45MTIsNTkuMzEyLTI3LjkxMmM3My41NTIsMCw3My4xMzEsNjguNzE2LDczLjEzMSwxMDYuNDcyDQoJTDM0MS45MSwzMzAuNjU0TDM0MS45MSwzMzAuNjU0eiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="mb-1" style="width: 15px; height: 15px;" />
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hvr-underline-from-left" href="https://github.com/dangitsdavid/" target="_blank">
-                        GitHub
-                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQ5NiA0OTYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5NiA0OTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGlkPSJTVkdDbGVhbmVySWRfMCIgc3R5bGU9ImZpbGw6IzNFNzdCRjsiIGQ9Ik0yNDcuOTkyLDUuMTYzQzExMS4wNDgsNS4xNjMsMCwxMTYuNjI3LDAsMjU0LjE2Mw0KCWMwLDEwOS45OTIsNzEuMDQ4LDIwMy4zMiwxNjkuNjMyLDIzNi4yNGMxMi4zOTIsMi4yOTYsMTYuOTEyLTUuMzkyLDE2LjkxMi0xMmMwLTUuOTA0LTAuMjE2LTIxLjU2LTAuMzM2LTQyLjM0NA0KCWMtNjksMTUuMDY0LTgzLjU1Mi0zMy4zNzYtODMuNTUyLTMzLjM3NmMtMTEuMjY0LTI4Ljc2OC0yNy41Mi0zNi40MDgtMjcuNTItMzYuNDA4Yy0yMi41MjgtMTUuNDU2LDEuNjk2LTE1LjE2LDEuNjk2LTE1LjE2DQoJYzI0Ljg4LDEuNzUyLDM3Ljk3NiwyNS42NzIsMzcuOTc2LDI1LjY3MmMyMi4xNDQsMzguMDQ4LDU4LjA2NCwyNy4wNDgsNzIuMTkyLDIwLjY3MmMyLjIzMi0xNi4wOCw4LjY1Ni0yNy4wNjQsMTUuNzM2LTMzLjI4DQoJYy01NS4wNTYtNi4yOTYtMTEyLjk0NC0yNy42NC0xMTIuOTQ0LTEyMy4wNGMwLTI3LjE3Niw5LjY1Ni00OS40MDgsMjUuNTItNjYuODMyYy0yLjU2OC02LjI5Ni0xMS4wNzItMzEuNiwyLjQxNi02NS44NzINCgljMCwwLDIwLjgzMi02LjY4OCw2OC4yLDI1LjUyYzE5Ljc4NC01LjUyLDQxLTguMjgsNjIuMDk2LTguMzkyYzIxLjA0OCwwLjExMiw0Mi4yOCwyLjg2NCw2Mi4wOTYsOC4zOTINCgljNDcuMzI4LTMyLjIwOCw2OC4xMjgtMjUuNTIsNjguMTI4LTI1LjUyYzEzLjUyLDM0LjI3Miw1LjAxNiw1OS41NzYsMi40NTYsNjUuODcyYzE1LjkwNCwxNy40MjQsMjUuNTA0LDM5LjY0OCwyNS41MDQsNjYuODMyDQoJYzAsOTUuNjQtNTcuOTg0LDExNi42OC0xMTMuMjMyLDEyMi44NTZjOC45MDQsNy42ODgsMTYuODMyLDIyLjg3MiwxNi44MzIsNDYuMTEyYzAsMzMuMjk2LTAuMjk2LDYwLjEyOC0wLjI5Niw2OC4yOTYNCgljMCw2LjY3Miw0LjQ3MiwxNC40MjQsMTcuMDQ4LDExLjk2OEM0MjUuMDE2LDQ1Ny4zODcsNDk2LDM2NC4xMjMsNDk2LDI1NC4xNjNDNDk2LDExNi42MjcsMzg0Ljk1Miw1LjE2MywyNDcuOTkyLDUuMTYzeiIvPg0KPGc+DQoJPHBhdGggaWQ9IlNWR0NsZWFuZXJJZF8wXzFfIiBzdHlsZT0iZmlsbDojM0U3N0JGOyIgZD0iTTI0Ny45OTIsNS4xNjNDMTExLjA0OCw1LjE2MywwLDExNi42MjcsMCwyNTQuMTYzDQoJCWMwLDEwOS45OTIsNzEuMDQ4LDIwMy4zMiwxNjkuNjMyLDIzNi4yNGMxMi4zOTIsMi4yOTYsMTYuOTEyLTUuMzkyLDE2LjkxMi0xMmMwLTUuOTA0LTAuMjE2LTIxLjU2LTAuMzM2LTQyLjM0NA0KCQljLTY5LDE1LjA2NC04My41NTItMzMuMzc2LTgzLjU1Mi0zMy4zNzZjLTExLjI2NC0yOC43NjgtMjcuNTItMzYuNDA4LTI3LjUyLTM2LjQwOGMtMjIuNTI4LTE1LjQ1NiwxLjY5Ni0xNS4xNiwxLjY5Ni0xNS4xNg0KCQljMjQuODgsMS43NTIsMzcuOTc2LDI1LjY3MiwzNy45NzYsMjUuNjcyYzIyLjE0NCwzOC4wNDgsNTguMDY0LDI3LjA0OCw3Mi4xOTIsMjAuNjcyYzIuMjMyLTE2LjA4LDguNjU2LTI3LjA2NCwxNS43MzYtMzMuMjgNCgkJYy01NS4wNTYtNi4yOTYtMTEyLjk0NC0yNy42NC0xMTIuOTQ0LTEyMy4wNGMwLTI3LjE3Niw5LjY1Ni00OS40MDgsMjUuNTItNjYuODMyYy0yLjU2OC02LjI5Ni0xMS4wNzItMzEuNiwyLjQxNi02NS44NzINCgkJYzAsMCwyMC44MzItNi42ODgsNjguMiwyNS41MmMxOS43ODQtNS41Miw0MS04LjI4LDYyLjA5Ni04LjM5MmMyMS4wNDgsMC4xMTIsNDIuMjgsMi44NjQsNjIuMDk2LDguMzkyDQoJCWM0Ny4zMjgtMzIuMjA4LDY4LjEyOC0yNS41Miw2OC4xMjgtMjUuNTJjMTMuNTIsMzQuMjcyLDUuMDE2LDU5LjU3NiwyLjQ1Niw2NS44NzJjMTUuOTA0LDE3LjQyNCwyNS41MDQsMzkuNjQ4LDI1LjUwNCw2Ni44MzINCgkJYzAsOTUuNjQtNTcuOTg0LDExNi42OC0xMTMuMjMyLDEyMi44NTZjOC45MDQsNy42ODgsMTYuODMyLDIyLjg3MiwxNi44MzIsNDYuMTEyYzAsMzMuMjk2LTAuMjk2LDYwLjEyOC0wLjI5Niw2OC4yOTYNCgkJYzAsNi42NzIsNC40NzIsMTQuNDI0LDE3LjA0OCwxMS45NjhDNDI1LjAxNiw0NTcuMzg3LDQ5NiwzNjQuMTIzLDQ5NiwyNTQuMTYzQzQ5NiwxMTYuNjI3LDM4NC45NTIsNS4xNjMsMjQ3Ljk5Miw1LjE2M3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMxMTRDODI7IiBkPSJNMzc4LjQ5NiwxMDkuMTMxYzEzLjEyOCwzMy45MDQsNC43NTIsNTguOTI4LDIuMiw2NS4xNzZjMTUuOTA0LDE3LjQyNCwyNS41MDQsMzkuNjQ4LDI1LjUwNCw2Ni44MzINCgkJYzAsOTUuNjQtNTcuOTg0LDExNi42OC0xMTMuMjMyLDEyMi44NTZjOC45MDQsNy42ODgsMTYuODMyLDIyLjg3MiwxNi44MzIsNDYuMTEyYzAsMzMuMjk2LTAuMjk2LDYwLjEyOC0wLjI5Niw2OC4yOTYNCgkJYzAsNi42NzIsNC40NzIsMTQuNDI0LDE3LjA0OCwxMS45NjhDNDI1LjAxNiw0NTcuMzg3LDQ5NiwzNjQuMTIzLDQ5NiwyNTQuMTYzYzAtMjkuNTYtNS4xNTItNTcuODk2LTE0LjU2OC04NC4yDQoJCUM0NDcuMjQsMTMzLjk2Myw0MDkuMTg0LDEwOS45ODcsMzc4LjQ5NiwxMDkuMTMxeiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMxMTRDODI7IiBkPSJNMTkyLjk3NiwzNzcuMzIzYzIuNzg0LTUuNjE2LDYuMTg0LTkuOTg0LDkuNzYtMTMuMTQ0Yy0zMC4xNzYtMy40NTYtNjEuMTY4LTExLjUxMi04My4wNDgtMzMuNzQ0DQoJCUMxMzYuNTIsMzU4LjQ1MSwxNjMuOTI4LDM3MS4xOTUsMTkyLjk3NiwzNzcuMzIzeiIvPg0KPC9nPg0KPHBhdGggc3R5bGU9ImZpbGw6IzZDQTlFQTsiIGQ9Ik0xMi45MTIsMjcwLjk0N2MwLTEzNy41MzYsMTExLjA0OC0yNDksMjQ3Ljk5Mi0yNDljNzYuMDQsMCwxNDQuMDU2LDM0LjM5MiwxODkuNTM2LDg4LjQ4OA0KCUM0MDUuNTIsNDYuNzU1LDMzMS42MTYsNS4xNjMsMjQ3Ljk5Miw1LjE2M0MxMTEuMDQ4LDUuMTYzLDAsMTE2LjYyNywwLDI1NC4xNjNjMCw2MS4zMiwyMi4xMiwxMTcuNDI0LDU4Ljc1MiwxNjAuNzkyDQoJQzI5Ljk0NCwzNzQuMjkxLDEyLjkxMiwzMjQuNjQzLDEyLjkxMiwyNzAuOTQ3eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzA4M0U2NjsiIGQ9Ik0zMjIuNzEyLDQyNi44OTljMC0yMy4yMzItNy45MjgtMzguNDQtMTYuODMyLTQ2LjEyOGM1NS4yNDgtNi4xNiwxMTMuMjQtMjcuMjE2LDExMy4yNC0xMjIuODQ4DQoJYzAtMjcuMTg0LTkuNi00OS40LTI1LjUyLTY2LjgyNGMyLjU3Ni02LjI5NiwxMS4wOTYtMzEuNjA4LTIuNDU2LTY1Ljg3MmMwLDAtMi41NzYtMC43OTItNy44OTYtMC40ODgNCgljNS44MDgsMjUuODQtMC40MTYsNDQuMzItMi41NTIsNDkuNTY4YzE1LjkwNCwxNy40MjQsMjUuNTA0LDM5LjY0OCwyNS41MDQsNjYuODMyYzAsOTUuNjQtNTcuOTg0LDExNi42OC0xMTMuMjMyLDEyMi44NTYNCgljOC45MDQsNy42ODgsMTYuODMyLDIyLjg3MiwxNi44MzIsNDYuMTEyYzAsMzMuMjk2LTAuMjk2LDYwLjEyOC0wLjI5Niw2OC4yOTZjMCw1Ljg3MiwzLjQ5NiwxMi41NjgsMTIuOTIsMTIuNDA4DQoJQzMyMi40ODgsNDc5LjU1NSwzMjIuNzEyLDQ1NS42NTksMzIyLjcxMiw0MjYuODk5eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzExNEM4MjsiIGQ9Ik0xMTcuNDY0LDQyMy45OTVjNS4yMDgsMTAuNzIsMjIuNzEyLDM2LjQsNjguODg4LDMwLjk5MmMtMC4wNjQtNS42NDgtMC4xMTItMTEuOTc2LTAuMTQ0LTE4LjkyOA0KCUMxNTAuNTg0LDQ0My44MzUsMTI5LjU1Miw0MzQuNjY3LDExNy40NjQsNDIzLjk5NXoiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiM2Q0E5RUE7IiBkPSJNMTI2LjM2OCwzOTEuMzg3Yy0xLjU5Mi0yLjQtNC41NzYtNi40NzItOC45MDQtMTAuNTQ0DQoJQzEyMC4yNzIsMzg1LjAxMSwxMjMuMjU2LDM4OC41MDcsMTI2LjM2OCwzOTEuMzg3eiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="mb-1" style="width: 15px; height: 15px;" />
-                    </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link hvr-underline-from-left" href="./contactdavid.html">
-                    Contact
-    
-                </a>
-                </li>
-            </ul>
-        <!-- Search Bar
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control-sm mr-sm-2" type="text" placeholder="Search">
-            <button class="btn-sm btn-outline-secondary my-2 my-sm-0" type="submit" disabled>Search</button>
-        </form>
-        -->
-        </div>
-      </nav>
-  </div>
+	<!-- Royal Preloader -->
+	<script type="text/javascript" src="js/royal_preloader.min.js"></script>
+	<script type="text/javascript">
+		Royal_Preloader.config({
+		    mode:           'number',
+		    showProgress:   false,
+		    background:     '#1d1d1d'
+		});
+	</script>
 
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/ionicons.min.css" rel="stylesheet">
+	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/logoiconfont.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" title="main-css">
+	<link href="css/colors/blue.css" rel="stylesheet">
 
+	<!-- <link href="css/style-switcher.css" rel="stylesheet">
+	<link rel="alternate stylesheet" type="text/css" href="css/base-light.css" title="base-light"> -->
 </head>
 
-<body class="bg-dark">
+<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70"></body>
+	<div id="royal_preloader"></div>
 
-        <!-- Bugged First Block 
-        <div class="jumbotron2 mb-3 py-5" style="background-image: url('img/background2.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-            <video id="myVideo" loop muted autoplay>
-                <source src="./img/NetworkVid.mp4" type="video/mp4">
-                <source src="./img/NetworkVid.wbem" type="video/wbem">
-            </video>
-            <div class="container">
-                <div class="bg-secondary aboutme text-center rounded mb-3 py-4">
-                    <h1 class="display-4">Welcome to <a href="" data-toggle="modal" data-target="#PictureModal"><b>David</b></a>'s Block</h1>
-                    <hr class="my-4">
-                    <p class="lead text-dark">This is a simple start to a world full of information.</p>
-                </div>
-                <div class="bg-secondary aboutme rounded py-4">
-                    <p class="px-5 text-center">
-                        My passion and interest lies in Automation, Blockchain, and the Cloud! <br><br>
-                        Site is still under construction! <br>
-                        (▀̿Ĺ̯▀̿ ̿)
-                    </p>
-                </div>
-            </div>
-        </div>
-        -->
+	<!-- <div class="demo_changer">
+	    <div class="demo-icon">
+	        <i class="pe-7s-settings"></i>
+	    </div>
+	    <div class="form_holder">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="predefined_styles">
+	                	<h4>Mode</h4>
+	                    <a href="" data-rel="main-css" class="styleswitch2"><div class="btn dark-css-square"></div></a>  
+	                    <a href="" data-rel="base-light" class="styleswitch2"><div class="btn light-css-square"></div></a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div> -->
 
-        <!-- OG First Block -->
-        <div class="jumbotron mb-3" style="background-image: url('img/background2.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-            <div class="container">
-                <div class="bg-secondary aboutme text-center rounded mb-3 py-4">
-                    <h1 class="display-4">Welcome to <a href="" data-toggle="modal" data-target="#PictureModal"><b>David</b></a>'s Block</h1>
-                    <hr class="my-4">
-                    <p class="lead text-dark">This is a simple start to a world full of information.</p>
-                </div>
-                <div class="bg-secondary aboutme rounded py-4">
-                    <p class="px-5 text-center">
-                        My passion and interest lies in Automation, Blockchain, and the Cloud! <br><br>
-                        Site is still under construction! <br>
-                        (▀̿Ĺ̯▀̿ ̿)
-                    </p>
-                </div>
-            </div>
-        </div>
-        
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Tolgge navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand scroll-link" href="#home" data-id="home"><img src="images/davidsblock.png" style="width: 130px;"></a>
+					</div>
 
-    <!-- Certificate Carousel -->
-    <div class="jumbotron-fluid mb-3" style="background-color:rgba(19, 17, 18, 0.233);">
-        <h4 class="display-5 text-center text-white">
-            <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI1NiAyNTYiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTU4LjkzNCAxMzUuNDg0YTcuNTMxIDcuNTMxIDAgMCAxIC00LjQzOC0xLjQ2OCA3LjQzOSA3LjQzOSAwIDAgMSAtMi43NDItOC40NDFsMS4xOTEtMy42NjlhMi41NDIgMi41NDIgMCAwIDAgLS45MjUtMi44NWwtMy4xMi0yLjI2N2E3LjU0OSA3LjU0OSAwIDAgMSA0LjQzNy0xMy42NTdoMy44NThhMi41NDIgMi41NDIgMCAwIDAgMi40MjQtMS43NjFsMS4xOTItMy42NzFhNy41NDkgNy41NDkgMCAwIDEgMTQuMzU5IDBsMS4xOTIgMy42NjlhMi41NDMgMi41NDMgMCAwIDAgMi40MjQgMS43NjFoMy44NTlhNy41NSA3LjU1IDAgMCAxIDQuNDM3IDEzLjY1N2wtMy4xMjIgMi4yNjdhMi41NDMgMi41NDMgMCAwIDAgLS45MjYgMi44NDlsMS4xOTMgMy42N2E3LjU1IDcuNTUgMCAwIDEgLTExLjYxOCA4LjQ0MWwtMy4xMjEtMi4yNjhhMi41NDIgMi41NDIgMCAwIDAgLTMgMGwtMy4xMjEgMi4yNjhhNy41MjggNy41MjggMCAwIDEgLTQuNDMzIDEuNDd6bS01LjYtMjcuMzUyYTIuNTUgMi41NSAwIDAgMCAtMS41IDQuNjEybDMuMTIgMi4yNjdhNy41MjYgNy41MjYgMCAwIDEgMi43NDIgOC40NDFsLTEuMTkgMy42NjhhMi41NDkgMi41NDkgMCAwIDAgMy45MjIgMi44NTFsMy4xMjEtMi4yNjhhNy41MjIgNy41MjIgMCAwIDEgOC44NzUgMGwzLjEyMSAyLjI2OGEyLjU0OSAyLjU0OSAwIDAgMCAzLjkyMi0yLjg1MWwtMS4xOTItMy42NjlhNy41MjkgNy41MjkgMCAwIDEgMi43NDItOC40NGwzLjEyMy0yLjI2N2EyLjU1IDIuNTUgMCAwIDAgLTEuNS00LjYxMmgtMy44NTRhNy41MzEgNy41MzEgMCAwIDEgLTcuMTgtNS4yMTZsLTEuMTkyLTMuNjY5YTIuNTQ4IDIuNTQ4IDAgMCAwIC00Ljg0OCAwbC0xLjE5MiAzLjY2OWE3LjUzIDcuNTMgMCAwIDEgLTcuMTggNS4yMTZ6IiBmaWxsPSIjZWQ5YWJjIi8+PHBhdGggZD0ibTE3NS41IDkwLjVoLTUwLjVhMi41IDIuNSAwIDAgMSAwLTVoNTAuNWEyLjUgMi41IDAgMCAxIDAgNXoiIGZpbGw9IiNlZDlhYmMiLz48ZyBmaWxsPSIjODQ2Zjc1Ij48cGF0aCBkPSJtMjI0LjY2NyA1MC43MzJoLTE1MS42NzdhNy41MDkgNy41MDkgMCAwIDAgLTcuNSA3LjV2OS4xODlhMi41IDIuNSAwIDAgMCA1IDB2LTkuMTg5YTIuNSAyLjUgMCAwIDEgMi41LTIuNWgxNTEuNjc3YTIuNSAyLjUgMCAwIDEgMi41IDIuNXYxMzkuNTM2YTIuNSAyLjUgMCAwIDEgLTIuNSAyLjVoLTE1MS42NzdhMi41IDIuNSAwIDAgMSAtMi41LTIuNXYtMTQuN2EyLjUgMi41IDAgMCAwIC01IDB2MTQuN2E3LjUwOSA3LjUwOSAwIDAgMCA3LjUgNy41aDE1MS42NzdhNy41MDkgNy41MDkgMCAwIDAgNy41LTcuNXYtMTM5LjUzNmE3LjUwOSA3LjUwOSAwIDAgMCAtNy41LTcuNXoiLz48cGF0aCBkPSJtODYuMTQ0IDE4Ny45NDNhMi41IDIuNSAwIDAgMCA0LjA3MS0xLjk0M3YtNDAuNDA4YTguOTA2IDguOTA2IDAgMCAxIDIuNy0xLjI1IDE0IDE0IDAgMCAwIDEwLjI2NS0xNC4xMjkgOC45IDguOSAwIDAgMSAxLjk2My02LjAzOCAxNCAxNCAwIDAgMCAwLTE3LjQ2NCA4LjkwOCA4LjkwOCAwIDAgMSAtMS45NjItNi4wMzkgMTQgMTQgMCAwIDAgLTEwLjI3LTE0LjEyOCA4LjkxNiA4LjkxNiAwIDAgMSAtNS4xMzgtMy43MzMgMTQgMTQgMCAwIDAgLTE2LjYwOC01LjQgOC45MTkgOC45MTkgMCAwIDEgLTYuMzUgMCAxMy45OTEgMTMuOTkxIDAgMCAwIC0xNi42MDggNS40IDguOTEgOC45MSAwIDAgMSAtNS4xMzggMy43MzMgMTQgMTQgMCAwIDAgLTEwLjI2NCAxNC4xMjggOC45MDggOC45MDggMCAwIDEgLTEuOTYzIDYuMDM5IDE0IDE0IDAgMCAwIDAgMTcuNDY0IDguOTA4IDguOTA4IDAgMCAxIDEuOTYyIDYuMDM4IDE0IDE0IDAgMCAwIDEwLjI2NiAxNC4xMjkgOC45MDYgOC45MDYgMCAwIDEgMi43IDEuMjV2NDAuNDA4YTIuNSAyLjUgMCAwIDAgNC4wNzEgMS45NDVsMTguMTQ5LTE0LjY2NXptLTQ4LjM0NC01Ny40OGExMy45MDYgMTMuOTA2IDAgMCAwIC0zLjA2My05LjQyNSA4Ljk3MyA4Ljk3MyAwIDAgMSAwLTExLjE5IDEzLjkgMTMuOSAwIDAgMCAzLjA2NC05LjQyNiA4Ljk2OCA4Ljk2OCAwIDAgMSA2LjU3Ny05LjA1MiAxMy45MTEgMTMuOTExIDAgMCAwIDguMDE3LTUuODI1IDguOTczIDguOTczIDAgMCAxIDEwLjY0Mi0zLjQ1OCAxMy45MDYgMTMuOTA2IDAgMCAwIDkuOTEgMCA4Ljk3IDguOTcgMCAwIDEgMTAuNjQyIDMuNDU4IDEzLjkwOSAxMy45MDkgMCAwIDAgOC4wMTEgNS44MjUgOC45NjkgOC45NjkgMCAwIDEgNi41NzggOS4wNTIgMTMuOTExIDEzLjkxMSAwIDAgMCAzLjA2MiA5LjQyNiA4Ljk3MyA4Ljk3MyAwIDAgMSAwIDExLjE5IDEzLjkwNiAxMy45MDYgMCAwIDAgLTMuMDYzIDkuNDI1IDguOTcxIDguOTcxIDAgMCAxIC02LjU3NyA5LjA1MyAxMy45MDYgMTMuOTA2IDAgMCAwIC04LjAxOCA1LjgyNCA4Ljk3MiA4Ljk3MiAwIDAgMSAtMTAuNjM2IDMuNDYgMTMuODkxIDEzLjg5MSAwIDAgMCAtOS45MTEgMCA4Ljk3MiA4Ljk3MiAwIDAgMSAtMTAuNjQyLTMuNDU5IDEzLjkgMTMuOSAwIDAgMCAtOC4wMTctNS44MjQgOC45NyA4Ljk3IDAgMCAxIC02LjU3Ni05LjA1NHptMTIuOTY3IDUwLjN2LTI5Ljc4NWExNCAxNCAwIDAgMCAxNC4wNDkgMi40OTMgOC45MTEgOC45MTEgMCAwIDEgNi4zNTEgMCAxMy43NTcgMTMuNzU3IDAgMCAwIDQuOS45IDE0LjA4OCAxNC4wODggMCAwIDAgOS4xNDktMy40djI5LjhsLTE1LjY1NC0xMi42NWEyLjUgMi41IDAgMCAwIC0zLjE0MyAweiIvPjxwYXRoIGQ9Im0xMjUgMTIzLjdoMTcuNWEyLjUgMi41IDAgMCAwIDAtNWgtMTcuNWEyLjUgMi41IDAgMCAwIDAgNXoiLz48cGF0aCBkPSJtMTI1IDE0OC42aDgwYTIuNSAyLjUgMCAwIDAgMC01aC04MGEyLjUgMi41IDAgMCAwIDAgNXoiLz48cGF0aCBkPSJtMTI1IDE3My41aDY0Ljc1YTIuNSAyLjUgMCAwIDAgMC01aC02NC43NWEyLjUgMi41IDAgMCAwIDAgNXoiLz48cGF0aCBkPSJtMTk1LjUgMTIzLjdhMi41IDIuNSAwIDAgMCAwLTVoLTQzYTIuNSAyLjUgMCAwIDAgMCA1eiIvPjwvZz48L3N2Zz4=" style="width: 50px;"/>
-            <p href="" class="hvr-underline-from-center">
-                Certifications
-            </p> 
-            <img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI1NiAyNTYiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTU4LjkzNCAxMzUuNDg0YTcuNTMxIDcuNTMxIDAgMCAxIC00LjQzOC0xLjQ2OCA3LjQzOSA3LjQzOSAwIDAgMSAtMi43NDItOC40NDFsMS4xOTEtMy42NjlhMi41NDIgMi41NDIgMCAwIDAgLS45MjUtMi44NWwtMy4xMi0yLjI2N2E3LjU0OSA3LjU0OSAwIDAgMSA0LjQzNy0xMy42NTdoMy44NThhMi41NDIgMi41NDIgMCAwIDAgMi40MjQtMS43NjFsMS4xOTItMy42NzFhNy41NDkgNy41NDkgMCAwIDEgMTQuMzU5IDBsMS4xOTIgMy42NjlhMi41NDMgMi41NDMgMCAwIDAgMi40MjQgMS43NjFoMy44NTlhNy41NSA3LjU1IDAgMCAxIDQuNDM3IDEzLjY1N2wtMy4xMjIgMi4yNjdhMi41NDMgMi41NDMgMCAwIDAgLS45MjYgMi44NDlsMS4xOTMgMy42N2E3LjU1IDcuNTUgMCAwIDEgLTExLjYxOCA4LjQ0MWwtMy4xMjEtMi4yNjhhMi41NDIgMi41NDIgMCAwIDAgLTMgMGwtMy4xMjEgMi4yNjhhNy41MjggNy41MjggMCAwIDEgLTQuNDMzIDEuNDd6bS01LjYtMjcuMzUyYTIuNTUgMi41NSAwIDAgMCAtMS41IDQuNjEybDMuMTIgMi4yNjdhNy41MjYgNy41MjYgMCAwIDEgMi43NDIgOC40NDFsLTEuMTkgMy42NjhhMi41NDkgMi41NDkgMCAwIDAgMy45MjIgMi44NTFsMy4xMjEtMi4yNjhhNy41MjIgNy41MjIgMCAwIDEgOC44NzUgMGwzLjEyMSAyLjI2OGEyLjU0OSAyLjU0OSAwIDAgMCAzLjkyMi0yLjg1MWwtMS4xOTItMy42NjlhNy41MjkgNy41MjkgMCAwIDEgMi43NDItOC40NGwzLjEyMy0yLjI2N2EyLjU1IDIuNTUgMCAwIDAgLTEuNS00LjYxMmgtMy44NTRhNy41MzEgNy41MzEgMCAwIDEgLTcuMTgtNS4yMTZsLTEuMTkyLTMuNjY5YTIuNTQ4IDIuNTQ4IDAgMCAwIC00Ljg0OCAwbC0xLjE5MiAzLjY2OWE3LjUzIDcuNTMgMCAwIDEgLTcuMTggNS4yMTZ6IiBmaWxsPSIjZWQ5YWJjIi8+PHBhdGggZD0ibTE3NS41IDkwLjVoLTUwLjVhMi41IDIuNSAwIDAgMSAwLTVoNTAuNWEyLjUgMi41IDAgMCAxIDAgNXoiIGZpbGw9IiNlZDlhYmMiLz48ZyBmaWxsPSIjODQ2Zjc1Ij48cGF0aCBkPSJtMjI0LjY2NyA1MC43MzJoLTE1MS42NzdhNy41MDkgNy41MDkgMCAwIDAgLTcuNSA3LjV2OS4xODlhMi41IDIuNSAwIDAgMCA1IDB2LTkuMTg5YTIuNSAyLjUgMCAwIDEgMi41LTIuNWgxNTEuNjc3YTIuNSAyLjUgMCAwIDEgMi41IDIuNXYxMzkuNTM2YTIuNSAyLjUgMCAwIDEgLTIuNSAyLjVoLTE1MS42NzdhMi41IDIuNSAwIDAgMSAtMi41LTIuNXYtMTQuN2EyLjUgMi41IDAgMCAwIC01IDB2MTQuN2E3LjUwOSA3LjUwOSAwIDAgMCA3LjUgNy41aDE1MS42NzdhNy41MDkgNy41MDkgMCAwIDAgNy41LTcuNXYtMTM5LjUzNmE3LjUwOSA3LjUwOSAwIDAgMCAtNy41LTcuNXoiLz48cGF0aCBkPSJtODYuMTQ0IDE4Ny45NDNhMi41IDIuNSAwIDAgMCA0LjA3MS0xLjk0M3YtNDAuNDA4YTguOTA2IDguOTA2IDAgMCAxIDIuNy0xLjI1IDE0IDE0IDAgMCAwIDEwLjI2NS0xNC4xMjkgOC45IDguOSAwIDAgMSAxLjk2My02LjAzOCAxNCAxNCAwIDAgMCAwLTE3LjQ2NCA4LjkwOCA4LjkwOCAwIDAgMSAtMS45NjItNi4wMzkgMTQgMTQgMCAwIDAgLTEwLjI3LTE0LjEyOCA4LjkxNiA4LjkxNiAwIDAgMSAtNS4xMzgtMy43MzMgMTQgMTQgMCAwIDAgLTE2LjYwOC01LjQgOC45MTkgOC45MTkgMCAwIDEgLTYuMzUgMCAxMy45OTEgMTMuOTkxIDAgMCAwIC0xNi42MDggNS40IDguOTEgOC45MSAwIDAgMSAtNS4xMzggMy43MzMgMTQgMTQgMCAwIDAgLTEwLjI2NCAxNC4xMjggOC45MDggOC45MDggMCAwIDEgLTEuOTYzIDYuMDM5IDE0IDE0IDAgMCAwIDAgMTcuNDY0IDguOTA4IDguOTA4IDAgMCAxIDEuOTYyIDYuMDM4IDE0IDE0IDAgMCAwIDEwLjI2NiAxNC4xMjkgOC45MDYgOC45MDYgMCAwIDEgMi43IDEuMjV2NDAuNDA4YTIuNSAyLjUgMCAwIDAgNC4wNzEgMS45NDVsMTguMTQ5LTE0LjY2NXptLTQ4LjM0NC01Ny40OGExMy45MDYgMTMuOTA2IDAgMCAwIC0zLjA2My05LjQyNSA4Ljk3MyA4Ljk3MyAwIDAgMSAwLTExLjE5IDEzLjkgMTMuOSAwIDAgMCAzLjA2NC05LjQyNiA4Ljk2OCA4Ljk2OCAwIDAgMSA2LjU3Ny05LjA1MiAxMy45MTEgMTMuOTExIDAgMCAwIDguMDE3LTUuODI1IDguOTczIDguOTczIDAgMCAxIDEwLjY0Mi0zLjQ1OCAxMy45MDYgMTMuOTA2IDAgMCAwIDkuOTEgMCA4Ljk3IDguOTcgMCAwIDEgMTAuNjQyIDMuNDU4IDEzLjkwOSAxMy45MDkgMCAwIDAgOC4wMTEgNS44MjUgOC45NjkgOC45NjkgMCAwIDEgNi41NzggOS4wNTIgMTMuOTExIDEzLjkxMSAwIDAgMCAzLjA2MiA5LjQyNiA4Ljk3MyA4Ljk3MyAwIDAgMSAwIDExLjE5IDEzLjkwNiAxMy45MDYgMCAwIDAgLTMuMDYzIDkuNDI1IDguOTcxIDguOTcxIDAgMCAxIC02LjU3NyA5LjA1MyAxMy45MDYgMTMuOTA2IDAgMCAwIC04LjAxOCA1LjgyNCA4Ljk3MiA4Ljk3MiAwIDAgMSAtMTAuNjM2IDMuNDYgMTMuODkxIDEzLjg5MSAwIDAgMCAtOS45MTEgMCA4Ljk3MiA4Ljk3MiAwIDAgMSAtMTAuNjQyLTMuNDU5IDEzLjkgMTMuOSAwIDAgMCAtOC4wMTctNS44MjQgOC45NyA4Ljk3IDAgMCAxIC02LjU3Ni05LjA1NHptMTIuOTY3IDUwLjN2LTI5Ljc4NWExNCAxNCAwIDAgMCAxNC4wNDkgMi40OTMgOC45MTEgOC45MTEgMCAwIDEgNi4zNTEgMCAxMy43NTcgMTMuNzU3IDAgMCAwIDQuOS45IDE0LjA4OCAxNC4wODggMCAwIDAgOS4xNDktMy40djI5LjhsLTE1LjY1NC0xMi42NWEyLjUgMi41IDAgMCAwIC0zLjE0MyAweiIvPjxwYXRoIGQ9Im0xMjUgMTIzLjdoMTcuNWEyLjUgMi41IDAgMCAwIDAtNWgtMTcuNWEyLjUgMi41IDAgMCAwIDAgNXoiLz48cGF0aCBkPSJtMTI1IDE0OC42aDgwYTIuNSAyLjUgMCAwIDAgMC01aC04MGEyLjUgMi41IDAgMCAwIDAgNXoiLz48cGF0aCBkPSJtMTI1IDE3My41aDY0Ljc1YTIuNSAyLjUgMCAwIDAgMC01aC02NC43NWEyLjUgMi41IDAgMCAwIDAgNXoiLz48cGF0aCBkPSJtMTk1LjUgMTIzLjdhMi41IDIuNSAwIDAgMCAwLTVoLTQzYTIuNSAyLjUgMCAwIDAgMCA1eiIvPjwvZz48L3N2Zz4=" style="width: 50px;"/>
-        </h4>
-    </div>
-    
-    <div id="myCarousel" class="carousel slide bg-secondary" data-ride="carousel" style="background-image: url('img/network1.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner pt-3 pb-5">
-            <div class="carousel-item active">
-                <div class="container mt-4">
-                    <div class="bg-light text-center rounded pt-3 pb-1 mb-3 mx-auto" style="max-width: 200px;">
-                        <p href="#" class="display-5"><span class="text-warning">AWS</span> Solutions Architect - Associate (SAA-C02)</p>
-                    </div>
-                </div>
-                <img class="text-center mx-auto d-block hvr-buzz-out" src="./img/awssaa.png" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <div class="container mt-4">
-                    <div class="bg-light text-center rounded pt-3 pb-1 mb-3 mx-auto" style="max-width: 200px;">
-                        <p class="display-5"><span class="text-warning">AWS</span> Certified Cloud Practitioner</p>
-                    </div>
-                </div>
-                <img class="text-center mx-auto d-block hvr-buzz-out"  src="./img/awsccp.png" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <div class="container mt-4">
-                    <div class="bg-light text-center rounded pt-3 pb-1 mb-3 mx-auto" style="max-width: 200px;">
-                        <p class="display-5"><span class="text-danger">CompTIA</span> <br>A+ CE</p>
-                    </div>
-                </div>
-                <img class="text-center mx-auto d-block hvr-buzz-out"  src="./img/aplus.png" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <div class="container mt-4">
-                    <div class="bg-light text-center rounded pt-3 pb-1 mb-3 mx-auto" style="max-width: 200px;">
-                        <p class="display-5"><span class="text-primary">Microsoft</span> Certified: Azure Fundamentals</p>
-                    </div>
-                </div>
-                <img class="text-center mx-auto d-block hvr-buzz-out"  src="./img/az900.png" alt="Fourth slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#home" data-id="home" class="scroll-link">Home</a>
+							</li>
+							<li>
+								<a href="#aboutme" data-id="aboutme" class="scroll-link">About Me</a>
+							</li>
+							<li>
+								<a href="#skills" data-id="skills" class="scroll-link">Skills</a>
+							</li>
+							<li>
+								<a href="#certifications" data-id="certifications" class="scroll-link">Certifications</a>
+							</li>
+							<li>
+								<a href="#timeline" data-id="timeline" class="scroll-link">Work</a>
+							</li>
+							<li>
+								<a href="#projects" data-id="projects" class="scroll-link">Projects</a>
+							</li>
+
+							<li><a href="#contact" data-id="contact" class="scroll-link">Contact</a>
+							</li>
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Socials <span class="glyphicon glyphicon-menu-down"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="https://www.linkedin.com/in/dangdavid127/" target="_blank">LinkedIn</a></li>
+									<li><a href="https://github.com/dangitsdavid/" target="_blank">Github</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="jumbotron jumbotron-main" id="home">
+		<div id="particles-js"></div>
+		<div class="container center-vertically-holder">
+			<div class="center-vertically">
+				<div id="scaleReveal" class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
+					<!-- <img src="images/japan1.jpg" style="width: 50%;"> -->
+					<div class="ticker">
+						<h1>Welcome to</h1>
+						<h1>David's Block</h1>
+					</div>
+					<hr>
+					<p><strong>A</strong>utomation, <strong>B</strong>lockchain, & <strong>C</strong>loud</p>
+					<a href="#aboutme" data-id="aboutme" class="scroll-link btn btn-default btn-white btn-lg mt15">Down the Rabbit Hole <span class="ion-android-arrow-down"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="aboutme" class="background2 section-padding">
+		<div id="hello-intro" class="pb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-3 text-right">
+						<h2 class="no-margin rotateLeftReveal">Hello.</h2>
+					</div>
+					<div class="col-lg-9 col-sm-9 mt30-xs">
+						<h3 class="no-margin rightReveal">My name is David Dang.<br>Welcome to my block full of <strong>random interesting things about me</strong>.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="our-process-title" class="pt30 pb30 mb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">About Me</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<!-- <div class="row">
+				<div class="col-xs-12 section-title text-center">
+					<h2>Profile</h2>
+					<span class="section-divider"></span>
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-sm-4">
+					<img alt="" src="images/me.png" class="img-responsive">
+					<div class="profile-box">
+						<ul class="list-unstyled">
+							<li><strong>Name:</strong> David Dang</li>
+							<li><strong>Location:</strong> Los Angeles, CA</li>
+							<li><strong>Phone:</strong> (626) 863-5314</li>
+							<li><strong>Email:</strong> david.dang@davidsblock.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-8 mt30-xs">
+					<h5 class="heading-1 mb20">My passion lies with all things automation, blockchain, and cloud.</h5>
+					<h3 class="mb20 no-margin-top">
+						I currently run two small blockchain ventures/projects, NoCapStakepool and LetsPoolEther.
+					</h3>
+					<span class="divider"></span>
+					<h5 class="heading-1 mb20">Education:</h5>
+					<p class="text-small no-margin-bottom">
+						<span class="text-switch">California State University, Los Angeles</span><br>
+						Bachelors of Science, Business Administration, Major in Account, Minor in Economics
+					</p>
+					<span class="divider"></span>
+					<h5 class="heading-1">Fun Facts:</h5>
+					<p class="text-small text-switch mb20">
+						<ul class="text-small text-switch">
+							<li>I build computers/rigs for gaming/streaming and crypto-mining upon request for clients</li>
+							<li>I've gotten lost in a forest in Hawaii passed dark and almost died.</li>
+							<li>Huge Anime fan over here #weeb-life</li>
+							<li>Graduated with Business but decided to go with tech because it was my passion</li>
+						</ul>
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="skills" class="background2 section-padding">
+		<div id="our-process-title" class="pt30 pb30 mb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">Skills</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+					<h2>Destination: <strong>LevelUp</strong></h2>
+					<span class="section-divider"></span>
+				</div>
+			</div>
+			<div class="row">
+
+				<!-- 1 -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="services-box leftReveal">
+						<!-- <span class="services-badge badge">NEW</span> -->
+						<h3 class="service-name"><strong>Multi-Cloud:</strong><br>AWS (Specialty) &<br> Azure</h3>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30-xs">
+					<div class="services-box topReveal">
+						<h3 class="service-name"><strong>Languages:</strong><br>HTML, CSS, PHP, <br>Bash, YML</h3>
+					</div>
+				</div>
+
+				<!-- 3 -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30-sm mt30-xs">
+					<div class="services-box rightReveal">
+						<h3 class="service-name"><strong>OS:</strong><br>Windows/Linux <br>Administration</h3>
+					</div>
+				</div>
+
+				<!-- 4 -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30">
+					<div class="services-box leftReveal">
+						<h3 class="service-name"><strong>Monitoring:</strong><br>Prometheus, Grafana, <br>LogDNA</h3>
+					</div>
+				</div>
+
+				<!-- 5 -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30">
+					<div class="services-box bottomReveal">
+						<h3 class="service-name"><strong>Automation:</strong><br>Azure DevOps, Zapier,<br>CloudFormation</h3>
+					</div>
+				</div>
+
+				<!-- 6 -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30">
+					<div class="services-box rightReveal">
+						<h3 class="service-name"><strong>Support:</strong><br>Zendesk, JIRA, PagerDuty, <br>JAMF, G-Suite, AD</h3>
+					</div>
+				</div>
 
 
+			</div>
+		</div>
+	</section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="PictureModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content bg-dark">
-            <div class="modal-header">
-            <h5 class="modal-title text-white" id="exampleModalLabel">A Wild David Dang Appears</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" class="text-primary">x</span>
-            </button>
-            </div>
-            <div class="modal-body text-center text-white">
-                <img src="./img/hawaii1.JPG" class="img-fluid" alt="Responsive image">
-                An adventurer who loves embarking on the journey to see the world and learn cool tech along the way.
-            </div>
+	<section id="certifications">
+		<div id="our-process-title" class="pt30 pb30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">Certifications</h4>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        </div>
-        </div>
-    </div>
+		<div id="our-process">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
+						<div class="leftReveal">
+							<div>
+								<h3 class="process-number">AWS</h3>
+								<div>
+									<a href="https://www.youracclaim.com/badges/ec6d75f8-7478-41bf-a7ae-9a6ef984ab27" target="_blank"><img src="images/certificates/awssaa.png" style="width: 145px;"></a>
+								</div>
+								<h2>Solutions Architect - Associate</h2>
+							</div>
+							<!-- <div class="process-content">
+								<p class="no-margin">
+									Feb 2021
+								</p>
+							</div> -->
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
+						<div class="bottomReveal">
+							<div class="">
+								<h3 class="process-number">CompTIA</h3>
+								<div>
+									<a href="https://www.youracclaim.com/badges/6f3201af-c2bf-4975-8fe1-a95b47ea0452" target="_blank"><img src="images/certificates/aplus.png" style="width: 145px;"></a>
+								</div>
+								<h2>A+ ce</h2>
+							</div>
+							<!-- <div class="process-content">
+								<p class="no-margin">
+									June 2020
+								</p>
+							</div> -->
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50 no-border-right">
+						<div class="rightReveal">
+							<div class="">
+								<h3 class="process-number">Microsoft</h3>
+								<div>
+									<a href="https://www.credly.com/badges/04dc1179-36c5-48f6-9f0f-9b647a85ae37" target="_blank"><img src="images/certificates/az900.png" style="width: 145px;"></a>
+								</div>
+								<h2>Azure Fundamentals</h2>
+							</div>
+							<!-- <div class="process-content">
+								<p class="no-margin">
+									March 2021
+								</p>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    </body>
+		<div id="carousel" class="testimonial-carousel pt40 pb20">    				
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<span class="pe-7s-close heading-3-icon"></span>
+						<h2 class="heading-3">Recommendations</h2>
+						<div class="fade-quote-carousel carousel slide" id="quote-carousel" data-ride="carousel" data-interval="6000">
+							<ol class="carousel-indicators">
+								<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+								<!-- <li data-target="#quote-carousel" data-slide-to="1"></li> -->
+							</ol>
+							<div class="carousel-inner">
+								<div class="active item">
+									<blockquote>
+										<p>
+											"I am honored to have the opportunity to recommend David Dang. I have worked with David for approximately 1 year as his Director at ZipRecruiter where he exhibited exceptional performance dealing with a myriad of different challenges."
+										</p>
+										<small>
+											Anthony Strawitz, Information Technology Director - ZipRecruiter
+										</small>
+									</blockquote>
+								</div>
+								<!-- <div class="item">
+									<blockquote>
+										<p>
+											"Recommendation placeholder"
+										</p>
+									</blockquote>
+										<small>
+											Manager, Role - Company
+										</small>
+								</div> -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<!-- Footer -->
-<div class="container py-4">
-    <footer id="footer">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-unstyled float-right">
-                    <li class="float-lg-left"><a href="#top" class="text-primary">Back to top</a></li>
-                </ul>
-                <p class="text-white">&copy; dangitsdavid 2021<span class="text-primary"> | </span>UwU</p>
-            </div>
-        </div>
-    </footer>
-</div>
+	</section>
+
+	<section id="timeline" class="background1 section-padding-top">
+		<div id="our-process-title" class="pt30 pb30 mb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">Work</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+					<h2>Timeline</h2>
+					<span class="section-divider"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+
+					<ul class="timeline pb80">
+						<li class="timeline-inverted">
+							<div  class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/logos/chainlinklabslogo.png"></div>
+							<div class="timeline-panel rightReveal">
+								<div class="timeline-heading ">
+									<h5 class="heading-1 mb15">May 2021 - Present</h5>
+									<h4 class="subheading"><strong>Chainlink Labs</strong> | <strong>Blockchain Incident Responder</strong></h4>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul>
+											<li>
+												Utilizing monitoring and alerting tools, such as PagerDuty, Grafana, LogDNA and Prometheus, to detect and alert the team of needed action
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Following processes on alert response operations and supporting the team to ensure the reliable delivery of oracle data
+											</li>
+											<li>
+												Maintained 2 Chainlink Nodes on the Ethereum Testnet (Rinkeby and Kovan) utilzing AWS and on-prem infrastructure
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/logos/nocapstakepoollogo.png"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+									<h5 class="heading-1 mb15">March 2021 - Present</h5>
+									<h4 class="subheading"><strong>No Cap Stakepool</strong> | <strong>Founder / Stake Pool Operator</strong></h4>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul>
+											<li>
+												Provisioned and managing maintenance on 6 Mainnet nodes on the Cardano Blockchain using AWS, on-prem, and other providers
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Created techincal / non-technical documentation and tutorials for end user while participating on the Cardano forums
+											</li>
+											<li>
+												Branched a project, Lets Pool Ether, to focus on a Validator Node on the Ethereum 2.0 Blockchain 
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+
+						<li class="timeline-inverted">
+							<div  class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/logos/redgatelogo.png"></div>
+							<div class="timeline-panel rightReveal">
+								<div class="timeline-heading">
+									<h5 class="heading-1 mb15">Aug 2020 - May 2021</h5>
+									<h4 class="subheading"><strong>Redgate</strong> | <strong>Product Support Engineer</strong></h4>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul>
+											<li>
+												Reproduced and debug customer issues by using and building test environments, including experience in Windows Server and clusters, Microsoft SQL Server and Oracle SQL Server administration, Azure/AWS, Source Control systems (Git, TFS, SVN), Virtualization with VMWare, and Azure DevOps, and Redgate tools
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Triaged and solve daily average of 5+ tech support requests via Zendesk within SLA, including urgent tickets
+											</li>
+											<li>
+												Lead in training initiative for the support team, closing knowledge gaps within the AWS platform
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/logos/jackittechlogo.png"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+									<h5 class="heading-1 mb15">April 2020 - June 2020</h5>
+									<h4 class="subheading"><strong>Jack IT Tech</strong> | <strong>Jr. Full Stack Engineer</strong></h4>
+								</div>
+								<div class="timeline-body"> 
+									<p>
+										<ul>
+											<li>
+												Created 20+ WordPress pages, web pages, and landing sites using popular frameworks, such as Bootstrap
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Built staff tools and admin web panel using various technologies, including HTML, CSS, PHP, MySQL, AJAX
+											</li>
+											<li>
+												Operated in cPanel, including phpMyAdmin, SSH access, SSL/TLS, DNS, subdomains, and FTP accounts
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+
+						<li class="timeline-inverted">
+							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/logos/ziprecruiterlogo.png"></div>
+							<div class="timeline-panel rightReveal">
+								<div class="timeline-heading">
+									<h5 class="heading-1 mb15">Dec 2018 - March 2020</h5>
+									<h4 class="subheading"><strong>ZipRecruiter</strong> | <strong>IT Field Engineer</strong></h4>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul>
+											<li>
+												Provided desktop and server support, remotely troubleshoot issues on workstations with Bomgar, and created documentation of technical (VPN, DNS, DHCP) and user issues within the enterprise
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Set up and maintained conference rooms with TVs, projectors, Chromebox, video, and audio equipment
+											</li>
+											<li>
+												Maintained IT inventory and asset management, including procurement and imaging of Mac and Windows devices and 30+ applications/software platforms
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Provisioned 2-5+ user accounts weekly while managing deprovisioned backups to AWS S3
+											</li>
+											<li>
+												Managed Apple hardware and configurations with JAMF as an enterprise device management solution
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Presented and instructed IT best practices, procedures, and security policies to newly hired employees during weekly IT orientation sessions
+											</li>
+											<li>
+												Leading process owner with 4 automation projects for IT and HR departments at HQ office using Zapier
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src="images/logos/roberthalflogo.png"></div>
+							<div class="timeline-panel leftReveal">
+								<div class="timeline-heading">
+									<h5 class="heading-1 mb15">June 2018 - Nov 2018</h5>
+									<h4 class="subheading"><strong>Robert Half</strong> | <strong>Consultant (Protiviti)</strong></h4>
+								</div>
+								<div class="timeline-body">
+									<p>
+										<ul>
+											<li>
+												Provided consulting and audit services with the objective of delivering value through identifying areas of opportunity for improvement, combined with tangible recommendations
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Assisted in testing operating effectiveness of 52 controls for IT SOX and SOX compliance, with experience in the Manufacturing & Distribution and Financial Services industries
+											</li>
+											<li>
+												Analyzed over 500 business accounts and extracted useful data to prospect future business opportunities
+											</li>
+											<li style="color: rgb(194, 194, 194) !important;">
+												Communicated with management to respond and document work being performed in a timely manner
+											</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects" class="background1 section-padding-top">
+		<div id="our-process-title" class="pt30 pb30 mb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">Projects</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 section-title text-center">
+					<h2>Personal & Professional Projects</strong></h2>
+					<span class="section-divider"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center mb50">
+				</div>
+			</div>
+			<div id="thework">
+			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding">
+			    	<div class="portfolio-image-holder"><img src="images/work/1.png" alt="1" class="img-responsive portfolio-image"></div>
+			    	<span class="portfolio-badge badge text-dark">Cardano Blockchain</span>
+			    	<span class="portfolio-hover">
+						<span>
+							<a href="https://nocapstakepool.com//" target="_blank">
+								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
+							</a>
+							<span class="project-title no-margin-bottom mt10">Cardano Blockchain</span>
+						</span>
+					</span>
+			    </div>
+			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding">
+			    	<div class="portfolio-image-holder"><img src="images/work/2.png" alt="2" class="img-responsive portfolio-image"></div>
+			    	<span class="portfolio-badge badge text-dark">Ethereum Blockchain</span>
+			    	<span class="portfolio-hover">
+						<span>
+							<a href="https://letspoolether.com/" target="_blank">
+								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
+							</a>
+							<span class="project-title no-margin-bottom mt10">Ethereum Blockchain</span>
+						</span>
+					</span>
+			    </div>
+			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding">
+			    	<div class="portfolio-image-holder"><img src="images/work/1.jpg" alt="3" class="img-responsive portfolio-image"></div>
+			    	<span class="portfolio-badge badge">Work In Progress</span>
+			    	<span class="portfolio-hover">
+						<span>
+							<a href="javascript:void(0)">
+								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
+							</a>
+							<span class="project-title no-margin-bottom mt10">Future Projects Incoming :)</span>
+						</span>
+					</span>
+			    </div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="background2 section-padding">
+		<div id="our-process-title" class="pt30 pb30 mb60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">Contact</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mb30">
+				<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+					<h2>Contact Form</h2>
+					<span class="section-divider mb15"></span>
+					<p class="no-margin scaleReveal">Feel free to contact me using the form below or email david.dang@davidsblock.com.</p>
+				</div>
+			</div>
+			<!-- <div class="row">
+				<div class="col-sm-5 col-lg-4">
+					<h5 class="heading-1 mb20">Visit Us</h5>
+					<h4 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420<br>New York City, New York 99912</h4>
+					<p class="no-margin text-xs-small">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates. Temporibus autem quibusdam et aut.</p>
+					<hr class="mini-hr">
+					<p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+					<p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+					<p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+				</div> -->
+				<div class="col-sm-12 col-lg-12 mt30-xs">
+					
+					<form action="https://formspree.io/f/meqvkaoz" method="POST" data-toggle="validator" id="contactForm" name="contactForm">
+						<div class="row">
+						<div class="row mb10">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+										<input class="form-control" data-error="This section is required." id="name" placeholder="Your Name" required="" type="text" name="_name">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+										<input class="email form-control" data-error="This section is required." id="email" placeholder="Your Email" required="" type="email" name="_replyto">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<div class="controls">
+										<textarea class="form-control" data-error="This section is required." id="message" placeholder="Message" required="" rows="5" name="message"></textarea>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt15">
+							<div class="col-sm-6">
+								<div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div> 
+							</div>
+							<div class="col-sm-6 text-right">
+								<button type="submit" id="submit" class="btn btn-default btn-lg">Send</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer-padding">
+		<div>
+			<hr><br><br>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+					<h2 class="theme-title">Davids<span class="theme-title-smaller">Block</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-small text-center">
+					<hr>
+					<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
+					<p class="no-margin">&copy; dangitsdavid 2021 <span style="color: white !important;">|</span> UwU</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript Files -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/particles.min.js"></script>
+	<script type="text/javascript" src="js/particlesRun.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+	<script type="text/javascript" src="js/form-validator.min.js"></script>  
+	<script type="text/javascript" src="js/jquery.inview.min.js"></script>
+	<script type="text/javascript" src="js/jquery.countTo.js"></script>  
+	<script type="text/javascript">
+		/* ---- Counter (our count) ---- */
+		$('#ourcount').one('inview', function(event, isInView) {
+			if (isInView) {
+				$('.timer').countTo({speed: 3000});
+			}
+		});
+	</script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<!-- <script type="text/javascript" src="js/style-switcher.js"></script> -->
+
+</body>
+</html>
