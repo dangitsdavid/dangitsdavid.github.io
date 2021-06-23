@@ -613,28 +613,94 @@
 		</div>
 	</section>
 
-	<section id="contact">
-		<footer class="footer-padding">
-			<div>
-				<hr><br><br>
-			</div>
+	<section id="contact" class="background2 section-padding">
+		<div id="our-process-title" class="pt30 pb30 mb60">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2 text-center">
-						<h2 class="theme-title">Davids<span class="theme-title-smaller">Block</span></h2>
-						<small><strong style="color: #3498db !important;">Contact Me</strong>: <span style="color: white !important;">david.dang@davidsblock.com</span></small>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2 text-small text-center">
-						<hr>
-						<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
-						<p class="no-margin">&copy; dangitsdavid 2021 <span style="color: #3498db !important;">|</span> UwU</p>
+					<div class="col-lg-12 text-center">
+						<h4 class="no-margin">Contact</h4>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+		<div class="container">
+			<div class="row mb30">
+				<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+					<h2>Contact Form</h2>
+					<span class="section-divider mb15"></span>
+					<p class="no-margin scaleReveal">Feel free to contact me using the form below or email <strong style="color: #3498db !important;">david.dang@davidsblock.com</strong>.</p>
+				</div>
+			</div>
+
+				<div class="col-sm-12 col-lg-12 mt30-xs">
+
+					<!-- <form action="https://formspree.io/david.dang@davidsblock.com" method="POST" data-toggle="validator" id="contactForm" name="contactForm"> -->
+					<form action="https://formspree.io/david.dang@davidsblock.com" method="POST">
+						<div class="row">
+						<div class="row mb10">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+										<input class="form-control" data-error="This section is required." id="name" placeholder="Your Name" required="" type="text" name="_name">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<div class="controls">
+										<input class="email form-control" data-error="This section is required." id="email" placeholder="Your Email" required="" type="email" name="_replyto">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<div class="controls">
+										<textarea class="form-control" data-error="This section is required." id="message" placeholder="Message" required="" rows="5" name="message"></textarea>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt15">
+							<div class="col-sm-6">
+								<div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div> 
+							</div>
+							<div class="col-sm-6 text-right">
+								<button type="submit" id="submit" value="Send" class="btn btn-default btn-lg">Send</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
 	</section>
+
+	<footer class="footer-padding">
+		<div>
+			<hr><br><br>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+					<h2 class="theme-title">Davids<span class="theme-title-smaller">Block</span></h2>
+					<!-- <small><strong style="color: #3498db !important;">Contact Me</strong>: <span style="color: white !important;">david.dang@davidsblock.com</span></small> -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text-small text-center">
+					<hr>
+					<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
+					<p class="no-margin">&copy; dangitsdavid 2021 <span style="color: #3498db !important;">|</span> UwU</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<!-- Javascript Files -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
