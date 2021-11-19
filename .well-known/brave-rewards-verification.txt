@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: davidsblock.com
-Token: 0884660f4e9c8b0d31bbb23eeee4ee8e1b45e2d297afec09716acf4ae3ed68af
